@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar" color="dark">
+    <ion-buttons *ngIf="isNotHome" slot="start">
+      <ion-back-button color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-capitalize">{{pageTitle}}</ion-title>
+    <ion-thumbnail slot="end">
+      <img  src="../../../assets/img/rocket.svg" alt="LogoRocket">
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>

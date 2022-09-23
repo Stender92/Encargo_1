@@ -1,0 +1,18 @@
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab horizontal="end" vertical="top" slot="fixed" >
+    <ion-fab-button color="success"  size="small" [routerLink]="['/login']" routerLinkActive="router-link-active" >
+      <ion-icon name="log-in-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+
+  
+  <app-fab-menu></app-fab-menu>
+</ion-content>
