@@ -9,12 +9,12 @@ import { ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  pagetitle='login';
-  isNotHome=true;
+  pageTitle='Iniciar Sesión';
+  isNotHome=false;
 
   //modelo
   user : any = {
-    email:'',
+    username:'',
     password: ''
   }
 
@@ -27,8 +27,8 @@ export class LoginPage implements OnInit {
 
   login(){
     if(this.validarModelo(this.user)){
-      this.presentToast('Bienivenido ' + this.user.email);
-      this.router.navigate(['/']);
+      this.presentToast('Bienvenido ' + this.user.username);
+      this.router.navigate(['/home']);
     }
     else{
       this.presentToast("Debes ingresar : " + this.field);

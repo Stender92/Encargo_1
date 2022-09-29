@@ -6,6 +6,7 @@ import { LoadingController } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
 
   pageTitle = 'home';
@@ -32,8 +33,10 @@ export class HomePage {
   }
 
 
+
+
   ngOnInit(){
-    this.cargarLoading('Welcome to Lala World!!!');
+    this.cargarLoading('Bienvenido a nuestra pagina!');
     console.log('ngOnInit');
   }
 
@@ -54,7 +57,7 @@ export class HomePage {
   }
 
   ngOnDestroy(){
-    this.cargarLoading('Goodbye cruel world!!!')
+    this.cargarLoading('Adios!')
     console.log('ngOnDestroy');
   }
 
