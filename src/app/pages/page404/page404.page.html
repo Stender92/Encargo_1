@@ -1,6 +1,16 @@
-<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+<ion-buttons slot="start">
+  <ion-menu-button menu="main-menu"></ion-menu-button>
+</ion-buttons>
 
-<ion-content>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>404!!!</ion-title>
+    <ion-thumbnail slot="end">
+      <img  src="../../../assets/img/FFXIII_enemy_Cactuar.png" alt="Cactuar">
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
       <ion-card-title color="danger">La página solicitada no se encuentra disponible</ion-card-title>

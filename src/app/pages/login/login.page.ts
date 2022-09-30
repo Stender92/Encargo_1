@@ -37,12 +37,16 @@ export class LoginPage implements OnInit {
 
   validarModelo(model:any){
     for(var[key,value]  of Object.entries(model)){
-      if(value == ''){
+      if(value == 'User'){
         this.field = key;
-        return false;
+        return true;
+      }
+      if(value == 'Admin'){
+        this.field = key;
+        return true;
       }
     }
-    return true;
+    return false;
   }
 
   async presentToast(message: string, duration?:number) {

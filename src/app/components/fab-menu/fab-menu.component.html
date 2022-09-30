@@ -1,19 +1,19 @@
 <ion-fab horizontal="end" vertical="bottom">
-  <ion-fab-button color="tertiary">
+  <ion-fab-button color="succes">
     <ion-icon name="chevron-up-circle-outline"></ion-icon>
   </ion-fab-button>
   <ion-fab-list side="top">
-    <ion-fab-button color="primary" [routerLink]="['/about']">
+    <ion-fab-button color="success" [routerLink]="['/about']">
       <ion-icon name="people-outline"></ion-icon>
     </ion-fab-button>
-    <ion-fab-button color="warning" (click)="goContact()">
+    <ion-fab-button color="success" (click)="goContact()">
       <ion-icon color="light" name="mail-outline"></ion-icon>
     </ion-fab-button>
-    <ion-fab-button color="success" (click)="goNewsByUrl()">
-      <ion-icon name="newspaper-outline"></ion-icon>
+    <ion-fab-button color="success"  size="small" [routerLink]="['/coversor']" routerLinkActive="router-link-active" >
+      <ion-icon name="aperture"></ion-icon>
     </ion-fab-button>
-    <ion-fab-button color="danger" (click)="goWeatherNavCtrl()">
-      <ion-icon name="cloudy-night-outline"></ion-icon>
+    <ion-fab-button color="danger"  size="small" [routerLink]="['/login']" routerLinkActive="router-link-active" >
+      <ion-icon name="log-out-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab-list>    
 </ion-fab>
