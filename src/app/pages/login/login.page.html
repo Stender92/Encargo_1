@@ -6,31 +6,31 @@
     </ion-thumbnail>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content color="verdexd">
 
-  <ion-card>
+  <ion-card color="success">
     <ion-card-title>
       <ion-label color="dark" class="ion-text-center">
         <h1>Bienvenido!!!</h1>
       </ion-label>
     </ion-card-title>
     <ion-card-content>
-      <ion-item>
+      <ion-item color="verdexd">
         <ion-label position="floating">Nombre de usuario</ion-label>
         <ion-input  type="string"
                     [(ngModel)]="user.username"
                     required
                     placeholder="Tu nombre de usuario"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item color="verdexd">
         <ion-label position="floating">Password</ion-label>
         <ion-input  type="password"
                     [(ngModel)]="user.password"
-                    pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{4,6}$"
+                    pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
                     required></ion-input>
       </ion-item>
     </ion-card-content>
-    <ion-button shape="block" (click)="login()" color="success">Login</ion-button>
+    <ion-button shape="block" (click)="login()" color="verdexd">Login</ion-button>
   </ion-card>
 
 </ion-content>
