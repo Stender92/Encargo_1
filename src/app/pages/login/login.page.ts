@@ -36,14 +36,28 @@ export class LoginPage implements OnInit {
   }
 
   validarModelo(model:any){
-    for(var[key,value]  of Object.entries(model)){
-      if(value == 'User'){
-        this.field = key;
-        return true;
+    for(var[user,admin]  of Object.entries(model)){
+      user = 'User';
+      admin = 'Admin';
+      if(this.user.username == user){
+        for(var[pass]  of Object.entries(model)){
+          pass = 'Ab123456'
+          if(this.user.password == pass)
+            return true;
+          else;
+            return false;
+        }
+        return false;
       }
-      if(value == 'Admin'){
-        this.field = key;
-        return true;
+      if(this.user.username == admin){
+        for(var[pass]  of Object.entries(model)){
+          pass = 'Ab123456'
+          if(this.user.password == pass)
+            return true;
+          else;
+            return false;
+        }
+        return false;
       }
     }
     return false;
