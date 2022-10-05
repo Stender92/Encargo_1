@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
     password: ''
   }
 
-  field : string = '';
+  field : string = 'datos validos';
 
   constructor(private toastController: ToastController, private router:Router) { }
 
@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/home']);
     }
     else{
-      this.presentToast("Debes ingresar : " + this.field);
+      this.presentToast("Debes ingresar  " + this.field);
     }
   }
 

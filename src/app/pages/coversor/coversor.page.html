@@ -12,13 +12,20 @@
 
 <ion-content color="verdexd">
 
-  <div id="container">
-    <div col="12">
-      <img src="../../../assets/gif/cactuar-gif-12.gif" />
-    </div>
-    <div col="12">
-      ¡Pagina en construcción!
-    </div>
-  </div>
+  <ion-list *ngIf="listaDB" lines="full">
+
+    <ion-item *ngFor="let personaje of listaDB">
+      <ion-avatar slot="start">
+        <img [src]="personaje.image" alt="{{personaje.name}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{personaje.name | titlecase}}</h2>
+        <h4>{{personaje.especie | titlecase}}</h4>
+        <h4>Mas Informacion en <a href="{{personaje.wiki}}" target="_blank">Wiki</a></h4>
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
